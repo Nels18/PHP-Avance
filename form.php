@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Mon formulaire de contact</h1>
-    <form action="/ma-page-de-traitement" method="post">
+    <form action="form.php" method="post">
         <div>
             <label for="name">Nom :</label>
             <input type="text" id="name" name="user_name">
@@ -30,3 +30,8 @@
     </form>
 </body>
 </html>
+
+<?php
+    var_dump($_POST);
+    echo  $_POST['user_name'];
+?>
