@@ -11,14 +11,29 @@
 </head>
 <body>
     <h1>Mon formulaire de contact</h1>
-    <form action="form.php" method="post">
+    <form action="thanks.php" method="post">
         <div>
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="user_name">
+            <label for="lastname">Nom :</label>
+            <input type="text" id="name" name="user_lastname">
+        </div>
+        <div>
+            <label for="firstname">Prénom :</label>
+            <input type="text" id="name" name="user_firstname">
         </div>
         <div>
             <label for="mail">e-mail :</label>
             <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="tel" name="user_tel">
+        </div>
+        <div>
+            <select name="user_subject" id="subject">
+                <option value="Demande de renseignement">Demande de renseignement</option>
+                <option value="Demande de devis">Demande de devis</option>
+                <option value="Réclamation">Réclamation</option>
+            </select>
         </div>
         <div>
             <label for="msg">Message :</label>
@@ -30,8 +45,3 @@
     </form>
 </body>
 </html>
-
-<?php
-    var_dump($_POST);
-    echo  $_POST['user_name'];
-?>
